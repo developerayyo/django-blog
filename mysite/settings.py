@@ -27,6 +27,13 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# Email
+# Add your smtp details below
+EMAIL_HOST = 'smtp.domain.com'
+EMAIL_HOST_USER = 'example@mail.domain.com'
+EMAIL_HOST_PASSWORD = 'password'
+EMAIL_PORT = 587
+EMAIL_USE_TLA = True
 
 # Application definition
 
