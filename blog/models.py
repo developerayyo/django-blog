@@ -13,7 +13,8 @@ class PublishedManager(models.Manager):
             .filter(status='published')
 
 
-class Post(models.Model):
+class Post(models.Model)\
+        :
     STATUS_CHOICES = (
         ('draft', 'Draft'),
         ('published', 'Published'),

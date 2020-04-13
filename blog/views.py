@@ -66,7 +66,7 @@ class PostListView(ListView):
 def post_share(request, post_id):
     # retrieve post by id
     post = get_object_or_404(Post, id=post_id, status='published')
-    sent =False
+    sent = False
     if request.method == 'POST':
         # form was submitted
         form = EmailPostForm(request.POST)
