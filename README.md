@@ -25,6 +25,6 @@ Functional Blog written in django
 - [ ] Create feeds for blog posts 
 - [ ] Adding full text search functionality
 
-##Frontend features lists
+## Frontend features lists
 - [ ] loading........
 
