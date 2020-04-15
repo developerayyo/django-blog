@@ -27,4 +27,3 @@ Functional Blog written in django
 
 ## Frontend features lists
 - [ ] loading........
-
