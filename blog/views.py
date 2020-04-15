@@ -6,8 +6,8 @@ from .forms import EmailPostForm, CommentForm, SearchForm
 from django.core.mail import send_mail
 from taggit.models import Tag
 from django.db.models import Count
-from django.contrib.postgres.search import SearchVector
-
+from django.contrib.postgres.search import SearchVector, SearchQuery, SearchRank
+from django.contrib.postgres.search import TrigramSimilarity
 
 # Create your views here.
 
@@ -59,10 +59,10 @@ def post_detail(request, year, month, day, post):
 
     # List of similar posts
     post_tags_ids = post.tags.values_list('id', flat=True)
-    similar_posts = Post.published.filter(tags__in=post_tags_ids)\
-                                  .exclude(id=post.id)
-    similar_posts = similar_posts.annotate(same_tags=Count('tags'))\
-                                 .order_by('-same_tags', '-publish')[:4]
+    similar_posts = Post.published.filter(tags__in=post_tags_ids) \
+        .exclude(id=post.id)
+    similar_posts = similar_posts.annotate(same_tags=Count('tags')) \
+                        .order_by('-same_tags', '-publish')[:4]
     return render(request,
                   'blog/post/detail.html',
                   {'post': post,
@@ -114,9 +114,25 @@ def post_search(request):
         form = SearchForm(request.GET)
         if form.is_valid():
             query = form.cleaned_data['query']
+
+            # Ordinary full-text search
+            # results = Post.published.annotate(
+            #     search=SearchVector('title', 'body'),
+            # ).filter(search=query)
+
+            # full-text search with stemming and ranking functionality
+            # search_vector = SearchVector('title', weight='A') + \
+            #                 SearchVector('body', weight='B')
+            # search_query = SearchQuery(query)
+            # results = Post.published.annotate(
+            #     search=search_vector,
+            #     rank=SearchRank(search_vector, search_query)
+            # ).filter(rank__gte=0.3).order_by('-rank')
+
+            # Search beased on Triagram Similarity
             results = Post.published.annotate(
-                search=SearchVector('title', 'body'),
-            ).filter(search=query)
+                similarity=TrigramSimilarity('title', query),
+            ).filter(similarity__gt=0.1).order_by('-similarity')
     return render(request,
                   'blog/post/search.html',
                   {'form': form,
