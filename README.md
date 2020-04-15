@@ -20,10 +20,10 @@ Functional Blog written in django
 - [x] Adding a Comment System
 - [x] Adding tagging functionality
 - [x] Retrieving similar posts
-- [x] Using custom templates tags and filter
-- [ ] Adding sitemap functionality
-- [ ] Create feeds for blog posts 
-- [ ] Adding full text search functionality
+- [x] Adding custom templates tags and filter
+- [x] Adding sitemap functionality
+- [x] Create feeds for blog posts 
+- [x] Adding full text search functionality
 
 ## Frontend features lists
 - [ ] loading........
