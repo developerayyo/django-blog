@@ -20,7 +20,7 @@ Functional Blog written in django
 - [x] Adding a Comment System
 - [x] Adding tagging functionality
 - [x] Retrieving similar posts
-- [ ] Using custom templates tags and filter
+- [x] Using custom templates tags and filter
 - [ ] Adding sitemap functionality
 - [ ] Create feeds for blog posts 
 - [ ] Adding full text search functionality
