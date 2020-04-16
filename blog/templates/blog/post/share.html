@@ -13,7 +13,7 @@ Share a post
         <form method="post">
             {{ form.as_p }}
             {% csrf_token %}
-        <input type="submit" value="Send e-mail">
+            <p><input type="submit" value="Share"></p>
         </form>
     {% endif %}
 {% endblock %}

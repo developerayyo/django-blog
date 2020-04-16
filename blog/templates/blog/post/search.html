@@ -17,10 +17,19 @@
         {% endfor %}
             <p><a href="{% url "blog:post_search" %}">Search again</a> </p>
     {% else %}
-        <h1>Search for posts</h1>
-        <form method="get">
-            {{ form.as_p }}
-            <input type="submit" value="Search">
+        <!-- Search Widget -->
+        <div class="card my-4">
+          <h5 class="card-header">Search for posts</h5>
+          <div class="card-body">
+            <div class="input-group">
+        <form class="form-group" method="get">
+        {{ form.as_p }}
+        <span class="input-group-btn">
+            <input class="btn btn-primary" type="submit" value="Search">
+        </span>
         </form>
+        </div>
+        </div>
+        </div>
     {% endif %}
 {% endblock %}

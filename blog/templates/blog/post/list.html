@@ -2,14 +2,17 @@
 {% load blog_tags %}
 {% block title %}My Blog{% endblock %}
 {% block content %}
-    <h1>My Blog</h1>
+  <!-- Page Content -->
+        <!-- Blog Post -->
     {% if tag %}
         <h2>Posts tagged with "{{ tag.name }}"</h2>
     {% endif %}
     {% for post in posts %}
+        <div class="card mb-4" id="cardib">
+          <div class="card-body">
         <h2>
             <a href="{{ post.get_absolute_url }}">
-                {{ post.title }}
+		<h2 class="card-title">{{ post.title }}</h2>
             </a>
             <p class="tags">
                 Tags:
@@ -23,11 +26,16 @@
 
             </p>
         </h2>
-        <p class="date">
-            Published {{ post.publish }} by {{ post.author }}
-        </p>
+
 {#        {{ post.body|truncatewords:30|linebreaks }}#}
-            {{ post.body|markdown|truncatewords_html:30 }}
+	<p class="card-text">{{ post.body|markdown|truncatewords_html:30 }}
+</p>
+<a href="{{ post.get_absolute_url }}" class="btn btn-primary">Read More &rarr;</a>
+</div>
+          <div class="card-footer text-muted">
+            Published {{ post.publish }} by {{ post.author }}
+          </div>
+        </div>
     {% endfor %}
     {% include "pagination.html" with page=posts %}
 {% endblock %}
