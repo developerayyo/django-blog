@@ -24,7 +24,7 @@ SECRET_KEY = 'b0gx#(b3i#_pgqy)o9+sjx5sx#=7@vca)6@8nsxm3*udx%rreo'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['devayo.herokuapp.com', '127.0.0.1']
 
 # Email
 # Add your smtp details below
