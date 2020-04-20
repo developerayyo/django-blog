@@ -9,6 +9,7 @@ from django.db.models import Count
 from django.contrib.postgres.search import SearchVector, SearchQuery, SearchRank
 from django.contrib.postgres.search import TrigramSimilarity
 
+
 # Create your views here.
 
 
@@ -96,7 +97,7 @@ def post_share(request, post_id):
                       f"{post.title}"
             message = f"Read {post.title} at {post_url}\n\n" \
                       f"{cd['name']}\'s comments: {cd['comments']}"
-            send_mail(subject, message, 'admin@example.com', [cd['to']])
+            send_mail(subject, message, 'example@mail.example.com', [cd['to']])
             sent = True
     else:
         form = EmailPostForm()
@@ -121,18 +122,18 @@ def post_search(request):
             # ).filter(search=query)
 
             # full-text search with stemming and ranking functionality
-            # search_vector = SearchVector('title', weight='A') + \
-            #                 SearchVector('body', weight='B')
-            # search_query = SearchQuery(query)
-            # results = Post.published.annotate(
-            #     search=search_vector,
-            #     rank=SearchRank(search_vector, search_query)
-            # ).filter(rank__gte=0.3).order_by('-rank')
+            search_vector = SearchVector('title', weight='A') + \
+                            SearchVector('body', weight='B')
+            search_query = SearchQuery(query)
+            results = Post.published.annotate(
+                search=search_vector,
+                rank=SearchRank(search_vector, search_query)
+            ).filter(rank__gte=0.3).order_by('-rank')
 
             # Search beased on Triagram Similarity
-            results = Post.published.annotate(
-                similarity=TrigramSimilarity('title', query),
-            ).filter(similarity__gt=0.1).order_by('-similarity')
+            # results = Post.published.annotate(
+            #     similarity=TrigramSimilarity('title', query),
+            # ).filter(similarity__gt=0.1).order_by('-similarity')
     return render(request,
                   'blog/post/search.html',
                   {'form': form,

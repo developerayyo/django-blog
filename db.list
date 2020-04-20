@@ -1,0 +1,15 @@
+;
+; Archive created at 2020-04-20 15:03:30 WAT
+;     dbname: django-blog
+;     TOC Entries: 4
+;     Compression: -1
+;     Dump Version: 1.14-0
+;     Format: CUSTOM
+;     Integer: 4 bytes
+;     Offset: 8 bytes
+;     Dumped from database version: 12.2 (Ubuntu 12.2-2.pgdg18.04+1)
+;     Dumped by pg_dump version: 12.2 (Ubuntu 12.2-2.pgdg18.04+1)
+;
+;
+; Selected TOC Entries:
+;

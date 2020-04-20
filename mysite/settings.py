@@ -13,7 +13,10 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+MEDIA_DIR = os.path.join(BASE_DIR, 'media')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
@@ -21,19 +24,19 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = ''
 
-SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'b0gx#(b3i#_pgqy)o9+sjx5sx#=7@vca)6@8nsxm3*udx%rreo')
-
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'b0gx#(b3i#_pgqy)ogem install heroku9+sjx5sx#=7@vca)6@8nsxm3*udx%rreo')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
 
-ALLOWED_HOSTS = ['devayo.herokuapp.com', '127.0.0.1']
+DEBUG = True
+
+ALLOWED_HOSTS = []
 
 # Email
 # Add your smtp details below
-EMAIL_HOST = 'smtp.domain.com'
-EMAIL_HOST_USER = 'example@mail.domain.com'
-EMAIL_HOST_PASSWORD = 'password'
+EMAIL_HOST = ''
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
 EMAIL_PORT = 587
 EMAIL_USE_TLA = True
 
@@ -52,6 +55,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'django.contrib.sitemaps',
     'django.contrib.postgres',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -70,7 +74,7 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'blog/templates')]
+        'DIRS': []
         ,
         'APP_DIRS': True,
         'OPTIONS': {
@@ -91,12 +95,12 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        # 'ENGINE': 'django.db.backends.sqlite3',
-        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'blog',
-        'USER': 'blog',
-        'PASSWORD': 'ayo',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        # 'ENGINE': 'django.db.backends.postgresql',
+        # 'NAME': '#',
+        # 'USER': '#',
+        # 'PASSWORD': '#',
     }
 }
 
@@ -125,6 +129,8 @@ LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'Africa/Bangui'
 
+# TIME_ZONE = 'UTC'
+
 USE_I18N = True
 
 USE_L10N = True
@@ -137,15 +143,13 @@ USE_TZ = True
 # The absolute path to the directory where collectstatic will collect static files for deployment.
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
+MEDIA_ROOT = MEDIA_DIR
+MEDIA_URL = '/media/'
+
 # The URL to use when referring to static files (where they will be served from)
+
 STATIC_URL = '/static/'
 
-# Heroku: Update database configuration from $DATABASE_URL.
-import dj_database_url
+# to kill django server
+# sudo lsof -t -i tcp:8000 | xargs kill -9
 
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
-
-# Simplified static file serving.
-# https://warehouse.python.org/project/whitenoise/
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'

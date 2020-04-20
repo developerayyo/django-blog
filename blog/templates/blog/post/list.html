@@ -1,40 +1,41 @@
 {% extends "blog/base.html" %}
 {% load blog_tags %}
-{% block title %}My Blog{% endblock %}
+{% block title %}Developerayo{% endblock %}
 {% block content %}
-  <!-- Page Content -->
-        <!-- Blog Post -->
+    <!-- Page Content -->
+    <!-- Blog Post -->
     {% if tag %}
         <h2>Posts tagged with "{{ tag.name }}"</h2>
     {% endif %}
     {% for post in posts %}
         <div class="card mb-4" id="cardib">
-          <div class="card-body">
-        <h2>
-            <a href="{{ post.get_absolute_url }}">
-		<h2 class="card-title">{{ post.title }}</h2>
-            </a>
-            <p class="tags">
-                Tags:
-                {% for tag in post.tags.all %}
-                    <a href="{% url "blog:post_list_by_tag" tag.slug %}">
-                        {{ tag.name }}
+            <img class="card-img-top" src="{{ post.post_image.url }}" alt="Card image cap" width="750" height="300">
+            <div class="card-body">
+                <h2>
+                    <a href="{{ post.get_absolute_url }}">
+                        <h2 class="card-title">{{ post.title }}</h2>
                     </a>
-                    {% if not forloop.last %},
-                    {% endif %}
-                {% endfor %}
+                    <p class="tags">
+                        Tags:
+                        {% for tag in post.tags.all %}
+                            <a href="{% url "blog:post_list_by_tag" tag.slug %}">
+                                {{ tag.name }}
+                            </a>
+                            {% if not forloop.last %},
+                            {% endif %}
+                        {% endfor %}
 
-            </p>
-        </h2>
+                    </p>
+                </h2>
 
-{#        {{ post.body|truncatewords:30|linebreaks }}#}
-	<p class="card-text">{{ post.body|markdown|truncatewords_html:30 }}
-</p>
-<a href="{{ post.get_absolute_url }}" class="btn btn-primary">Read More &rarr;</a>
-</div>
-          <div class="card-footer text-muted">
-            Published {{ post.publish }} by {{ post.author }}
-          </div>
+                {#        {{ post.body|truncatewords:30|linebreaks }}#}
+                <p class="card-text">{{ post.body|markdown|truncatewords_html:30 }}
+                </p>
+                <a href="{{ post.get_absolute_url }}" class="btn btn-primary">Read More &rarr;</a>
+            </div>
+            <div class="card-footer text-muted">
+                Published {{ post.publish }} by {{ post.author }}
+            </div>
         </div>
     {% endfor %}
     {% include "pagination.html" with page=posts %}

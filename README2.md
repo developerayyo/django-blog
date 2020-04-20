@@ -1,0 +1,65 @@
+# Django-blog
+Blog App that supports native comments, tagging system and other cool stuffs written in django.
+
+## Blog features
+Admin, customized model managers, pagination, share posts by email functionality, native comment system, tagging functionality,
+similar posts retrieval, custom templates tags and filter, sitemap functionality(XML), 
+feeds for blog posts(XML),full text search postgresql functionality, and 
+few other cool stuffs.
+
+## Installation
+1. Clone this project on your machine 
+1. `cd` into the dir
+1. Install virtual environment `python3 -m pip install --user virtualenv`
+1. Create your python virtual environment `python3 -m venv venv`
+1. Activate venv `source venv/bin/activate`
+1. Install requirements `pip3 install -r requirements.txt`
+1. run `python manage.py makemigrations`
+1. run `python manage.py migrate`
+1. create superuser for admin access `python manage,py createsuperuser`
+and follow the on-screen instructions to put your details
+1. finally run `python manage.py runserver` and go to the local host
+
+#NOTE:
+
+To use full text search postgresql functionality, you must have postgresql
+installed on your system and change your default project database settings in 
+`settings.py`
+
+from: 
+```
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
+```
+to:
+```
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': '<your_db_name>',
+        'USER': '<postgresql_user>',
+        'PASSWORD': '<your_db_password>',
+    }
+}
+
+```
+#Contribution
+Your contributions are welcome. just follow the basic Github contribution 
+guidelines and you good to go.
+#
+*Blog is live on Heroku with demo posts:* [here](https://devayo.herokuapp.com/blog)
+
+## Follow Developerayo
+
+![Developerayo Logo](media/img/WhatsApp%20Image%202020-04-20%20at%206.28.00%20AM.jpeg) 
+
+![twitter](media/img/twitter-241-721979.png)[@developeryyo](https://twitter.com/Developerayyo)
+
+
+![linkedin](media/img/linkedin-189-721962.png)[Babalola Peter](https://www.linkedin.com/in/babalola-peter-689768163/)
+
+
