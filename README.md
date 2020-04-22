@@ -47,15 +47,16 @@ DATABASES = {
 }
 
 ```
-#Contribution
-Your contributions are welcome. just follow the basic Github contribution 
-guidelines and you good to go.
-#
-*Blog is live on Heroku with demo posts:* [here](https://devayo.herokuapp.com/blog)
+#Contributing
+Please read [CONTRIBUTING.md](https://gist.github.com/developerayyo/f27fa2aad3e56e8f9c40537574846fca) for details on our code of conduct, and the process for submitting pull requests to us.
+
+## Live on Heroku
+*The Blog is also live on Heroku with demo posts:* [here](https://devayo.herokuapp.com/blog)
+
+
+![Blog Sample](media/img/django-blog.png) 
 
 ## Follow Developerayo
-
-![Developerayo Logo](media/img/WhatsApp%20Image%202020-04-20%20at%206.28.00%20AM.jpeg) 
 
 ![twitter](media/img/twitter-241-721979.png)[@developeryyo](https://twitter.com/Developerayyo)
 
