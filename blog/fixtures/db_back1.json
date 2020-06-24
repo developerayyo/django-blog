@@ -1,0 +1,144 @@
+[
+{
+  "model": "blog.post",
+  "pk": 1,
+  "fields": {
+    "post_image": "img/teams_K0Gghxt.jpg",
+    "title": "Hello World",
+    "slug": "hello_post",
+    "author": 1,
+    "body": "As we all know that hello world is the most common thing in the programming world",
+    "publish": "2020-04-09T12:50:41Z",
+    "created": "2020-04-09T12:52:13.734Z",
+    "updated": "2020-04-19T11:26:57.143Z",
+    "status": "published"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 2,
+  "fields": {
+    "post_image": "img/teams.png",
+    "title": "John Doe",
+    "slug": "john-doe",
+    "author": 1,
+    "body": "You Know John Doe is the most popular non-existent person used in the world of web",
+    "publish": "2020-04-09T13:08:20Z",
+    "created": "2020-04-09T13:09:40.828Z",
+    "updated": "2020-04-19T11:26:45.878Z",
+    "status": "published"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 3,
+  "fields": {
+    "post_image": "img/developerayo_4Mrp0FI.JPG",
+    "title": "Peter Babalola",
+    "slug": "babalola-peter",
+    "author": 1,
+    "body": "Babalola Peter is the best person you could ever seen in the whole world.",
+    "publish": "2020-04-09T13:35:12Z",
+    "created": "2020-04-09T13:35:23.817Z",
+    "updated": "2020-04-19T11:26:30.584Z",
+    "status": "published"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 4,
+  "fields": {
+    "post_image": "img/Canva_-_Person_Using_Silver_Macbook_Pro.jpg",
+    "title": "Things Fall Apart",
+    "slug": "things-fall-apart",
+    "author": 1,
+    "body": "Things fall apart is a book by Chinua Achebe and it is one of the most popular books in Africa.",
+    "publish": "2020-04-09T16:16:24Z",
+    "created": "2020-04-09T16:17:36.661Z",
+    "updated": "2020-04-19T11:24:08.336Z",
+    "status": "published"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 5,
+  "fields": {
+    "post_image": "img/Canva_-_White_Bird.jpg",
+    "title": "Curriculum Vitae",
+    "slug": "curriculum-vitae",
+    "author": 1,
+    "body": "Curriculum Vitae (CV) is not supposed to be the determining factor of CS Degree holders, And very soon that will become the norms because CV will no longer be required but what will be required will be our github and hackerank profiles.",
+    "publish": "2020-04-09T16:17:39Z",
+    "created": "2020-04-09T16:20:02.656Z",
+    "updated": "2020-04-19T11:23:04.310Z",
+    "status": "published"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 6,
+  "fields": {
+    "post_image": "img/Canva_-_Man_Wearing_Blue_Dress_Shirt_11tX2oL.jpg",
+    "title": "Testing Mardown Syntax",
+    "slug": "testing-mardown-syntax",
+    "author": 1,
+    "body": "This is a way of formatting my post with markdown syntax \r\n----------------------------------------------------------------------------------------------\r\n###This is heading 3\r\n*This is emphasized* and **this is more emphasized**.\r\nAnd here's a [link to my website](https://developerayo.tech/)",
+    "publish": "2020-04-15T01:01:53Z",
+    "created": "2020-04-15T01:10:13.994Z",
+    "updated": "2020-04-19T11:22:45.920Z",
+    "status": "published"
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 1,
+  "fields": {
+    "post": 5,
+    "name": "Emmanuel",
+    "email": "emma@mail.com",
+    "body": "Yeah guy, freaky freaky, you're doing well",
+    "created": "2020-04-12T19:12:48.092Z",
+    "updated": "2020-04-12T19:12:48.092Z",
+    "active": true
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 2,
+  "fields": {
+    "post": 5,
+    "name": "Rapture",
+    "email": "rap@gmail.com",
+    "body": "My brother you're doing well",
+    "created": "2020-04-12T20:11:23.638Z",
+    "updated": "2020-04-12T20:11:23.638Z",
+    "active": true
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 3,
+  "fields": {
+    "post": 5,
+    "name": "Ayo",
+    "email": "ayo@icloud.com",
+    "body": "That's true, cv won't matter anymore for CS Degree",
+    "created": "2020-04-12T20:22:57.801Z",
+    "updated": "2020-04-12T20:22:57.801Z",
+    "active": true
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 4,
+  "fields": {
+    "post": 6,
+    "name": "lsdjhfjbnksds",
+    "email": "psodhjdjk@kdjv.com",
+    "body": "ojdfdvvybujoskpobvdhidnoomsndjso",
+    "created": "2020-06-22T08:03:02.702Z",
+    "updated": "2020-06-22T08:03:02.702Z",
+    "active": true
+  }
+}
+]

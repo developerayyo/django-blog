@@ -20,8 +20,10 @@ jmespath==0.9.5
 Markdown==3.2.1
 mock==4.0.2
 Pillow==7.1.1
+psycopg2==2.8.5
 psycopg2-binary==2.8.5
 python-dateutil==2.8.1
+python-dotenv==0.13.0
 pytz==2019.3
 requests==2.23.0
 s3transfer==0.3.3
