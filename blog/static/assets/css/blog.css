@@ -97,7 +97,7 @@ input[type=submit] {
     color: #666;
 }
 
-.social-icon {
+/* .social-icon {
     width: 3vw;
     min-height: 40vh;
     background-color: transparent;
@@ -105,22 +105,22 @@ input[type=submit] {
     top: 40%;
 
 
-}
+} */
 
-.social-icon i {
+/* .social-icon i {
     margin-left: 3px;
     margin-bottom: 3px;
     padding: 7px;
     color: white;
     border-radius: 15px;
 
-}
+} */
 
 .fa-facebook-square {
     background-color: #3b5998;
 }
 
-.fa-twitter-square {
+.fa-twitter {
     background-color: #1dcaff;
 }
 
@@ -136,11 +136,11 @@ input[type=submit] {
     background-color: #25d366;
 }
 
-.fa-linkedin-square {
+.fa-linkedin {
     background-color: #3b3598;
 }
 
-.fa-github-square {
+.fa-github {
     background-color: #211F1F;
 }
 
