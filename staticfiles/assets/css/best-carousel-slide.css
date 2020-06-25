@@ -1,0 +1,74 @@
+#carousel{
+  margin-bottom: 20px;
+}
+
+div.jumbotron.carousel-hero {
+  color: #fff;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin-bottom: 0;
+}
+
+div.jumbotron.hero-nature {
+  background-image: url('../img/wo.jpg');
+}
+
+div.jumbotron.hero-photography {
+  background-image: url('../../assets/img/teams.jpg');
+}
+
+div.jumbotron.hero-technology {
+  background-image: url('../../assets/img/Untitled.png');
+}
+
+h1.hero-title, h2.hero-title, h3.hero-title {
+  text-shadow: 0 3px 3px rgba(0,0,0,0.4);
+  color: #fff;
+}
+
+p.hero-subtitle {
+  max-width: 600px;
+  margin: 25px auto;
+  padding: 10px 15px;
+  color: #fff;
+}
+
+.plat {
+  border-radius: 0px;
+}
+
+/*.btn-primary.focus, .btn-primary:focus {*/
+/*  box-shadow: 0 0 0 0 #048f83;*/
+/*}*/
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #12d0d5;
+  border-color: #12d0d5;
+}
+
+.btn.btn-primary {
+  background-color: #36a9df;
+  border-color: #36a9df;
+}
+
+/*.btn-primary.focus, .btn-primary:focus {*/
+/*  box-shadow: 0 0 0 .2rem #12d0d5;*/
+/*}*/
+
+* {
+  /*box-sizing: inherit;*/
+}
+
+*:before, *:after {
+  /*box-sizing: inherit;*/
+}
+
+span {
+  font-style: inherit;
+  font-weight: inherit;
+}
+

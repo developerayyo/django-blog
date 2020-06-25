@@ -116,7 +116,7 @@ def post_search(request):
         if form.is_valid():
             query = form.cleaned_data['query']
 
-            # Ordinary full-text search
+           # Ordinary full-text search
             # results = Post.published.annotate(
             #     search=SearchVector('title', 'body'),
             # ).filter(search=query)

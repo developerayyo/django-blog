@@ -2,7 +2,6 @@
 venv/
 .idea/
 .env
-staticfiles/
 db.dump
 db.list
 latest.dump
