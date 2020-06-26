@@ -147,7 +147,7 @@ USE_L10N = True
 USE_TZ = True
 
 MEDIA_ROOT = MEDIA_DIR
-MEDIA_URL = '/media/'
+# MEDIA_URL = '/media/'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
@@ -172,3 +172,16 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # Update Database Configuration for heroku
 prod_db = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(prod_db)
+
+"""Using azure to serve medi files
+    """
+DEFAULT_FILE_STORAGE = 'backend.custom_azure.AzureMediaStorage'
+# STATICFILES_STORAGE = 'backend.custom_azure.AzureStaticStorage'
+
+# STATIC_LOCATION = "static"
+MEDIA_LOCATION = "media"
+
+AZURE_ACCOUNT_NAME = "mydjangoaccountstorage"
+AZURE_CUSTOM_DOMAIN = f'{AZURE_ACCOUNT_NAME}.blob.core.windows.net'
+# STATIC_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{STATIC_LOCATION}/'
+MEDIA_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{MEDIA_LOCATION}/'
