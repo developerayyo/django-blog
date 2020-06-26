@@ -31,5 +31,5 @@ urlpatterns = [
     path("", include("blog.urls", namespace="blog")),
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps},
          name='django.contrib.sitemaps.views.sitemap')
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) \
- + staticfiles_urlpatterns()
+]+ staticfiles_urlpatterns()
+#  + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) \
