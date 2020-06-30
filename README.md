@@ -51,10 +51,10 @@ DATABASES = {
 Please read [CONTRIBUTING.md](https://gist.github.com/developerayyo/f27fa2aad3e56e8f9c40537574846fca) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Live on Heroku
-*The Blog is also live on Heroku with demo posts:* [here](https://devayo.herokuapp.com/blog)
+*The Blog is also live on Heroku:* [here](https://developerayo.herokuapp.com/)
 
 
-![Blog Sample](media/img/django-blog.png) 
+![Blog Sample](media/img/demo.png) 
 
 ## Follow Developerayo
 
@@ -62,5 +62,3 @@ Please read [CONTRIBUTING.md](https://gist.github.com/developerayyo/f27fa2aad3e5
 
 
 ![linkedin](media/img/linkedin-189-721962.png)[Babalola Peter](https://www.linkedin.com/in/babalola-peter-689768163/)
-
-
