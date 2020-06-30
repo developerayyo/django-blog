@@ -58,7 +58,7 @@ Please read [CONTRIBUTING.md](https://gist.github.com/developerayyo/f27fa2aad3e5
 
 ## Follow Developerayo
 
-![twitter](media/img/twitter-241-721979.png)[@developeryyo](https://twitter.com/Developerayyo)
+>twitter: [@developeryyo](https://twitter.com/Developerayyo)
 
 
-![linkedin](media/img/linkedin-189-721962.png)[Babalola Peter](https://www.linkedin.com/in/babalola-peter-689768163/)
+>Linkedin: [Babalola Peter](https://www.linkedin.com/in/babalola-peter-689768163/)
