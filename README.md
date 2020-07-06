@@ -54,7 +54,7 @@ Please read [CONTRIBUTING.md](https://gist.github.com/developerayyo/f27fa2aad3e5
 *The Blog is also live on Heroku:* [here](https://developerayo.herokuapp.com/)
 
 
-![Blog Sample](media/img/demo.png) 
+![Blog Sample](media/img/demo.png)
 
 ## Follow Developerayo
 
