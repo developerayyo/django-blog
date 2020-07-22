@@ -51,7 +51,7 @@ DATABASES = {
 Please read [CONTRIBUTING.md](https://gist.github.com/developerayyo/f27fa2aad3e56e8f9c40537574846fca) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Live on Heroku
-*The Blog is also live on Heroku:* [here](https://developerayo.herokuapp.com/)
+*The Blog is also live on Heroku:* [here](https://www.developerayo.tech/)
 
 
 ![Blog Sample](media/img/demo.png)
